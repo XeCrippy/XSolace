@@ -1,7 +1,5 @@
 #include "stdafx.h"
 #include "DeadRising2.h"
-#include <xui.h>
-#include <xuiapp.h>
 
 namespace DeadRising2 {
 
