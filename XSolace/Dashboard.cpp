@@ -5,12 +5,34 @@ XINPUT_STATE state;
 void MsgBox() {
 
     const wchar_t* buttonLabels[] = { L"Change Power LED", L"Reboot", L"Close"};
-    xTools::Xam::ShowMessageBox(
+    uint32_t buttonPressedIndex = 0;
+    uint32_t result = xTools::Xam::ShowMessageBox(
         L"Dashboard Testing",
         L"Testing",
         buttonLabels,
-        ARRAYSIZE(buttonLabels)
+        ARRAYSIZE(buttonLabels),
+        &buttonPressedIndex,
+        XMB_ALERTICON
     );
+
+    if (result == ERROR_SUCCESS) {
+
+        switch (buttonPressedIndex) {
+
+        case 0:
+            Sleep(100);
+            xTools::SMC::SetPowerLED(xTools::PowerLED_Blink, true);
+            break;
+        case 1:
+            Sleep(100);
+            xTools::Xam::Reboot();
+            break;
+        case 2:
+            break;
+        default:
+            break;
+        }
+    }
 }
 
 void Dashboard::Init()

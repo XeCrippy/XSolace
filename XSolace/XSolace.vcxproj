@@ -262,10 +262,12 @@
     <None Include="xsolace.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="assert.h" />
     <ClInclude Include="Crackdown.h" />
     <ClInclude Include="CSGO.h" />
     <ClInclude Include="Dashboard.h" />
     <ClInclude Include="Dashlaunch.h" />
+    <ClInclude Include="DeadRising2.h" />
     <ClInclude Include="EnemyTerritory.h" />
     <ClInclude Include="Formatter.h" />
     <ClInclude Include="lib.h" />
@@ -276,6 +278,7 @@
     <ClInclude Include="SMC.h" />
     <ClInclude Include="SonicAdventure.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TheClub.h" />
     <ClInclude Include="XAM.h" />
     <ClInclude Include="XSolace.h" />
   </ItemGroup>
@@ -284,6 +287,7 @@
     <ClCompile Include="CSGO.cpp" />
     <ClCompile Include="Dashboard.cpp" />
     <ClCompile Include="Dashlaunch.cpp" />
+    <ClCompile Include="DeadRising2.cpp" />
     <ClCompile Include="EnemyTerritory.cpp" />
     <ClCompile Include="Formatter.cpp" />
     <ClCompile Include="Log.cpp" />
@@ -300,6 +304,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_LTCG|Xbox 360'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TheClub.cpp" />
     <ClCompile Include="XAM.cpp" />
     <ClCompile Include="XSolace.cpp" />
   </ItemGroup>

@@ -50,6 +50,10 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 		Sleep(15000);
 		CSGO::CounterStrike::LoadPlugin();
 		break;
+	case xTools::GAME_DEADRISING2:
+		Sleep(15000);
+		DeadRising2::_DeadRising2::LoadPlugin();
+		break;
 	case xTools::GAME_ENEMYTERRITORY:
 		Sleep(15000);
 		EnemyTerritory::_EnemyTerritory::LoadPlugin();
@@ -61,6 +65,10 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 	case xTools::GAME_SAINTSROW2:
 		Sleep(15000);
 		SaintsRow2::_SR2::LoadPlugin();
+		break;
+	case xTools::GAME_THECLUB:
+		Sleep(15000);
+		TheClub::_TheClub::LoadPlugin();
 		break;
     default:
         break;

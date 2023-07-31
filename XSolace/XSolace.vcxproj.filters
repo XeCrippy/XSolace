@@ -75,6 +75,15 @@
     <ClInclude Include="EnemyTerritory.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
+    <ClInclude Include="TheClub.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
+    <ClInclude Include="DeadRising2.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
+    <ClInclude Include="assert.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -120,6 +129,12 @@
       <Filter>Source Files\Games</Filter>
     </ClCompile>
     <ClCompile Include="EnemyTerritory.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="TheClub.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="DeadRising2.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
   </ItemGroup>

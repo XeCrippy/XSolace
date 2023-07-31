@@ -38,3 +38,7 @@ namespace xTools {
         HalSendSMCMessage(s_CommandBuffer, nullptr);
     }
 }
+
+void HalSendSMCMessage(void* pInput, void* pOutput)
+{
+}
