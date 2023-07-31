@@ -262,7 +262,6 @@
     <None Include="xsolace.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="assert.h" />
     <ClInclude Include="Crackdown.h" />
     <ClInclude Include="CSGO.h" />
     <ClInclude Include="Dashboard.h" />
