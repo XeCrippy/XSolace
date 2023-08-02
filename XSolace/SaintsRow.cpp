@@ -58,22 +58,22 @@ namespace SaintsRow {
 		}
 
 		void Give10kMoney() {
-			uint32_t current = xTools::ReadUInt32(vars::money);
-			xTools::WriteUInt32(vars::money, current + 1000000u);
+			uint32_t current = xTools::Memory::ReadUInt32(vars::money);
+			xTools::Memory::WriteUInt32(vars::money, current + 1000000u);
 			xTools::Xam::XNotify("Gave player $10,000");
 		}
 
 		bool GodMode() {
 
 			if (!vars::godMode) {
-				xTools::WriteUInt32(vars::maxHealth, 1);
-				xTools::WriteFloat(vars::health, 999999.0f);
+				xTools::Memory::WriteUInt32(vars::maxHealth, 1);
+				xTools::Memory::WriteFloat(vars::health, 999999.0f);
 				xTools::Xam::XNotify("God Mode : Enabled");
 				vars::godMode = true;
 			}
 			else {
-				xTools::WriteUInt32(vars::maxHealth, 1000u);
-				xTools::WriteFloat(vars::health, 1000.0f);
+				xTools::Memory::WriteUInt32(vars::maxHealth, 1000u);
+				xTools::Memory::WriteFloat(vars::health, 1000.0f);
 				xTools::Xam::XNotify("God Mode : Disabled");
 				vars::godMode = false;
 			}
@@ -84,13 +84,13 @@ namespace SaintsRow {
 
 			if (!vars::infiniteAmmo) {
 				SendCommand("ammo 1");
-				xTools::WriteUInt32(vars::noReload, vars::noReload_on);
+				xTools::Memory::WriteUInt32(vars::noReload, vars::noReload_on);
 				xTools::Xam::XNotify("Infinite Ammo : Enabled");
 				vars::infiniteAmmo = true;
 			}
 			else {
 				SendCommand("ammo 0");
-				xTools::WriteUInt32(vars::noReload, vars::noReload_off);
+				xTools::Memory::WriteUInt32(vars::noReload, vars::noReload_off);
 				xTools::Xam::XNotify("Infinite Ammo : Disabled");
 				vars::infiniteAmmo = false;
 			}
@@ -100,12 +100,12 @@ namespace SaintsRow {
 		bool InfiniteSprint() {
 
 			if (!vars::infiniteSpint) {
-				xTools::WriteUInt8(vars::stamina, 0x2);
+				xTools::Memory::WriteUInt8(vars::stamina, 0x2);
 				xTools::Xam::XNotify("Infinite Sprint : Enabled");
 				vars::infiniteSpint = true;
 			}
 			else {
-				xTools::WriteUInt8(vars::stamina, 0x0);
+				xTools::Memory::WriteUInt8(vars::stamina, 0x0);
 				xTools::Xam::XNotify("Infinite Sprint : Disabled");
 				vars::infiniteSpint = false;
 			}

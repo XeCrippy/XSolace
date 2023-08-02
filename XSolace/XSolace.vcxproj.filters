@@ -81,6 +81,12 @@
     <ClInclude Include="DeadRising2.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
+    <ClInclude Include="SleepingDogs.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
+    <ClInclude Include="SaintsRow3.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -132,6 +138,12 @@
       <Filter>Source Files\Games</Filter>
     </ClCompile>
     <ClCompile Include="DeadRising2.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepingDogs.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="SaintsRow3.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
   </ItemGroup>

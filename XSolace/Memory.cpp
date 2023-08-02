@@ -35,43 +35,43 @@ namespace xTools {
         ExCreateThread(nullptr, 0, nullptr, nullptr, pStartAddress, pArgs, creationFlags);
     }
 
-    float ReadFloat(uint32_t Address) {
+    float Memory::ReadFloat(uint32_t Address) {
         return *(float*)Address;
     }
 
-    uint8_t ReadUInt8(uint32_t Address) {
+    uint8_t Memory::ReadUInt8(uint32_t Address) {
         return *(uint8_t*)Address;
     }
 
-    uint16_t ReadUInt16(uint32_t Address) {
+    uint16_t Memory::ReadUInt16(uint32_t Address) {
         return *(uint16_t*)Address;
     }
 
-    uint32_t ReadUInt32(uint32_t Address) {
+    uint32_t Memory::ReadUInt32(uint32_t Address) {
         return *(uint32_t*)Address;
     }
 
-    uint64_t ReadUInt64(uint32_t Address) {
+    uint64_t Memory::ReadUInt64(uint32_t Address) {
         return *(uint64_t*)Address;
     }
 
-    void WriteFloat(uint32_t Address, float Value) {
+    void Memory::WriteFloat(uint32_t Address, float Value) {
         *(float*)Address = Value;
     }
 
-    void WriteUInt8(uint32_t Address, uint8_t Value) {
+    void Memory::WriteUInt8(uint32_t Address, uint8_t Value) {
         *(uint8_t*)Address = Value;
     }
 
-    void WriteUInt16(uint32_t Address, uint16_t Value) {
+    void Memory::WriteUInt16(uint32_t Address, uint16_t Value) {
         *(uint16_t*)Address = Value;
     }
 
-    void WriteUInt32(uint32_t Address, uint32_t Value) {
+    void Memory::WriteUInt32(uint32_t Address, uint32_t Value) {
         *(uint32_t*)Address = Value;
     }
 
-    void WriteUInt64(uint32_t Address, uint64_t Value) {
+    void Memory::WriteUInt64(uint32_t Address, uint64_t Value) {
         *(uint64_t*)Address = Value;
     }
 }

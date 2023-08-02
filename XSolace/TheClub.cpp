@@ -37,12 +37,12 @@ namespace TheClub {
 
 			if (!vars::alwaysGetAMedal) {
 
-			    xTools::WriteUInt8(vars::CheatsAlwaysGetAMedal, vars::ON);
+			    xTools::Memory::WriteUInt8(vars::CheatsAlwaysGetAMedal, vars::ON);
 				vars::alwaysGetAMedal = true;
 			}
 			else {
 
-				xTools::WriteUInt8(vars::CheatsAlwaysGetAMedal, vars::OFF);
+				xTools::Memory::WriteUInt8(vars::CheatsAlwaysGetAMedal, vars::OFF);
 				vars::alwaysGetAMedal = false;
 			}
 			return vars::alwaysGetAMedal;

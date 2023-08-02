@@ -48,12 +48,12 @@ namespace EnemyTerritory {
 
 		bool InfiniteAmmo() {
 			if (!vars::infAmmo) {
-				xTools::WriteUInt32(vars::ammo, vars::ammo_on);
+				xTools::Memory::WriteUInt32(vars::ammo, vars::ammo_on);
 				xTools::Xam::PulseController();
 				vars::infAmmo = true;
 			}
 			else {
-				xTools::WriteUInt32(vars::ammo, vars::ammo_off);
+				xTools::Memory::WriteUInt32(vars::ammo, vars::ammo_off);
 				xTools::Xam::PulseController();
 				vars::infAmmo = false;
 			}

@@ -34,24 +34,24 @@ namespace SonicAdventure {
 		}
 
 		void __fastcall TimerSleep() {
-			xTools::WriteUInt32(vars::disableTimer, vars::disableTimer_on);
+			xTools::Memory::WriteUInt32(vars::disableTimer, vars::disableTimer_on);
 			gameFuncs::SleepTimer();
 		}
 
 		void __fastcall TimerWake() {
-			xTools::WriteUInt32(vars::disableTimer, vars::disableTimer_off);
+			xTools::Memory::WriteUInt32(vars::disableTimer, vars::disableTimer_off);
 			gameFuncs::WakeTimer();
 		}
 
 		bool InfRings() {
 			if (!vars::infRings) {
-				xTools::WriteUInt32(vars::addRingsOnDmg, vars::addRingsOnDmg_on);
+				xTools::Memory::WriteUInt32(vars::addRingsOnDmg, vars::addRingsOnDmg_on);
 				xTools::Xam::PulseController();
 				xTools::Xam::XNotify("Infinite Rings : Enabled");
 				vars::infRings = true;
 			}
 			else {
-				xTools::WriteUInt32(vars::addRingsOnDmg, vars::addRingsOnDmg_off);
+				xTools::Memory::WriteUInt32(vars::addRingsOnDmg, vars::addRingsOnDmg_off);
 				xTools::Xam::PulseController();
 				xTools::Xam::XNotify("Infinite Rings : Disabled");
 				vars::infRings = false;

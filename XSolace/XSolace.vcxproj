@@ -55,7 +55,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_LTCG|Xbox 360'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>2010-01</PlatformToolset>
     <BuildLogFile>$(IntDir)$(ProjectName)\BuildLog.txt</BuildLogFile>
@@ -240,6 +240,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PreprocessorDefinitions>NDEBUG;_XBOX;LTCG</PreprocessorDefinitions>
       <DisableSpecificWarnings>4481</DisableSpecificWarnings>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -249,12 +250,13 @@
       <SetChecksum>true</SetChecksum>
       <AdditionalDependencies>xapilib.lib;d3d9ltcg.lib;d3dx9.lib;xgraphics.lib;xboxkrnl.lib;xnet.lib;xaudio2.lib;xact3ltcg.lib;x3daudioltcg.lib;xmcoreltcg.lib;vcomp.lib</AdditionalDependencies>
       <AdditionalOptions>/DLL /ENTRY:"_DllMainCRTStartup" /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <ImageXex>
       <ConfigurationFile>xsolace.xml</ConfigurationFile>
     </ImageXex>
     <Deploy>
-      <DeploymentType>CopyToHardDrive</DeploymentType>
+      <DeploymentType>EmulateDvd</DeploymentType>
     </Deploy>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -274,6 +276,8 @@
     <ClInclude Include="Memory.h" />
     <ClInclude Include="SaintsRow.h" />
     <ClInclude Include="SaintsRow2.h" />
+    <ClInclude Include="SaintsRow3.h" />
+    <ClInclude Include="SleepingDogs.h" />
     <ClInclude Include="SMC.h" />
     <ClInclude Include="SonicAdventure.h" />
     <ClInclude Include="stdafx.h" />
@@ -293,6 +297,8 @@
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="SaintsRow.cpp" />
     <ClCompile Include="SaintsRow2.cpp" />
+    <ClCompile Include="SaintsRow3.cpp" />
+    <ClCompile Include="SleepingDogs.cpp" />
     <ClCompile Include="SMC.cpp" />
     <ClCompile Include="SonicAdventure.cpp" />
     <ClCompile Include="stdafx.cpp">

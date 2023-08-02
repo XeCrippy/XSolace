@@ -6,11 +6,24 @@ namespace xTools {
     class Memory
     {
     public:
+
         static void* ResolveFunction(const std::string& moduleName, uint32_t ordinal);
 
         static void Thread(PTHREAD_START_ROUTINE pStartAddress, void* pArgs = nullptr);
 
         static void ThreadEx(PTHREAD_START_ROUTINE pStartAddress, void* pArgs, uint32_t creationFlags);
+
+        static float ReadFloat(uint32_t Address);
+        static uint8_t ReadUInt8(uint32_t Address);
+        static uint16_t ReadUInt16(uint32_t Address);
+        static uint32_t ReadUInt32(uint32_t Address);
+        static uint64_t ReadUInt64(uint32_t Address);
+
+        static void WriteFloat(uint32_t Address, float Value);
+        static void WriteUInt8(uint32_t Address, uint8_t Value);
+        static  void WriteUInt16(uint32_t Address, uint16_t Value);
+        static void WriteUInt32(uint32_t Address, uint32_t Value);
+        static void WriteUInt64(uint32_t Address, uint64_t Value);
 
         template<typename T>
         static void Write(void* pDestination, T data)
@@ -48,16 +61,4 @@ namespace xTools {
             return Read<T>(reinterpret_cast<void*>(address));
         }
     };
-
-    float ReadFloat(uint32_t Address);
-    uint8_t ReadUInt8(uint32_t Address);
-    uint16_t ReadUInt16(uint32_t Address);
-    uint32_t ReadUInt32(uint32_t Address);
-    uint64_t ReadUInt64(uint32_t Address);
-
-    void WriteFloat(uint32_t Address, float Value);
-    void WriteUInt8(uint32_t Address, uint8_t Value);
-    void WriteUInt16(uint32_t Address, uint16_t Value);
-    void WriteUInt32(uint32_t Address, uint32_t Value);
-    void WriteUInt64(uint32_t Address, uint64_t Value);
 }

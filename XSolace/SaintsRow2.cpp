@@ -50,9 +50,9 @@ namespace SaintsRow2 {
 	namespace funcs {
 
 		void GiveMoney() {
-			uint32_t currMoney = xTools::ReadUInt32(vars::money);
+			uint32_t currMoney = xTools::Memory::ReadUInt32(vars::money);
 			uint32_t newMoney = currMoney + 1000000u;
-			xTools::WriteUInt32(vars::money, newMoney);
+			xTools::Memory::WriteUInt32(vars::money, newMoney);
 			xTools::Xam::XNotify("Gave player $10K");
 		}
 
@@ -98,12 +98,12 @@ namespace SaintsRow2 {
 
 		bool GiantPlayer() {
 			if (!vars::giantPlayer) {
-				xTools::WriteFloat(vars::playerSize, 2.0);
+				xTools::Memory::WriteFloat(vars::playerSize, 2.0);
 				xTools::Xam::XNotify("Giant Player : Enabled");
 				vars::giantPlayer = true;
 			}
 			else {
-				xTools::WriteFloat(vars::playerSize, 0.0f);
+				xTools::Memory::WriteFloat(vars::playerSize, 0.0f);
 				xTools::Xam::XNotify("Giant Player : Disabled");
 				vars::giantPlayer = false;
 			}
@@ -196,12 +196,12 @@ namespace SaintsRow2 {
 
 		bool TinyPlayer() {
 			if (!vars::tinyPlayer) {
-				xTools::WriteFloat(vars::playerSize, 0.5f);
+				xTools::Memory::WriteFloat(vars::playerSize, 0.5f);
 				xTools::Xam::XNotify("Tiny Player : Enabled");
 				vars::tinyPlayer = true;
 			}
 			else {
-				xTools::WriteFloat(vars::playerSize, 0.0f);
+				xTools::Memory::WriteFloat(vars::playerSize, 0.0f);
 				xTools::Xam::XNotify("Tiny Player : Disabled");
 				vars::tinyPlayer = false;
 			}

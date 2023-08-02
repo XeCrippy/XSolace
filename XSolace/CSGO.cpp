@@ -49,19 +49,19 @@ namespace CSGO {
 
 		bool GodMode() {
 
-			uint32_t health = xTools::ReadUInt32(vars::ptr) + vars::health_offset;
-			uint32_t maxHealth = xTools::ReadUInt32(vars::ptr) + vars::maxHealth_offset;
+			uint32_t health = xTools::Memory::ReadUInt32(vars::ptr) + vars::health_offset;
+			uint32_t maxHealth = xTools::Memory::ReadUInt32(vars::ptr) + vars::maxHealth_offset;
 
 			if (!vars::godMode) {
-				xTools::WriteUInt32(maxHealth, 9999999U);
-				xTools::WriteUInt32(health, 9999999U);
+				xTools::Memory::WriteUInt32(maxHealth, 9999999U);
+				xTools::Memory::WriteUInt32(health, 9999999U);
 				SendCommand("say Health set to 9999999");
 				vars::godMode = true;
 			}
 			else {
 
-				xTools::WriteUInt32(maxHealth, 100u);
-				xTools::WriteUInt32(health, 100u);
+				xTools::Memory::WriteUInt32(maxHealth, 100u);
+				xTools::Memory::WriteUInt32(health, 100u);
 				SendCommand("say Health set to 100");
 				vars::godMode = false;
 			}
@@ -73,12 +73,12 @@ namespace CSGO {
 
 			if (!vars::infiniteAmmo) {
 
-				xTools::WriteUInt32(vars::sv_infinite_ammo, vars::byte_on);
+				xTools::Memory::WriteUInt32(vars::sv_infinite_ammo, vars::byte_on);
 				vars::infiniteAmmo = true;
 			}
 			else {
 
-				xTools::WriteUInt32(vars::sv_infinite_ammo, vars::byte_off);
+				xTools::Memory::WriteUInt32(vars::sv_infinite_ammo, vars::byte_off);
 				vars::infiniteAmmo = false;
 			}
 			return vars::infiniteAmmo;
@@ -90,17 +90,17 @@ namespace CSGO {
 
 		bool MaxMoney() {
 
-			uint32_t _money = xTools::ReadUInt32(vars::ptr) + vars::money_offset;
+			uint32_t _money = xTools::Memory::ReadUInt32(vars::ptr) + vars::money_offset;
 
 			if (!vars::money) {
 
-				xTools::WriteUInt32(_money, 10000u);
+				xTools::Memory::WriteUInt32(_money, 10000u);
 				SendCommand("say Gave Max Money");
 				vars::money = true;
 			}
 			else {
 
-				xTools::WriteUInt32(_money, 100u);
+				xTools::Memory::WriteUInt32(_money, 100u);
 				vars::money = false;
 			}
 			return vars::money;
@@ -108,17 +108,17 @@ namespace CSGO {
 
 		bool InsaneScore() {
 
-			uint32_t _score = xTools::ReadUInt32(vars::ptr) + vars::score_offset;
+			uint32_t _score = xTools::Memory::ReadUInt32(vars::ptr) + vars::score_offset;
 
 			if (!vars::score) {
 
-				xTools::WriteUInt32(_score, 1333337u);
+				xTools::Memory::WriteUInt32(_score, 1333337u);
 				SendCommand("say Set score to 1333337");
 				vars::score = true;
 			}
 			else {
 
-				xTools::WriteUInt32(_score, 100u);
+				xTools::Memory::WriteUInt32(_score, 100u);
 				SendCommand("say Set score to 100");
 				vars::score = false;
 			}
@@ -129,13 +129,13 @@ namespace CSGO {
 
 			if (!vars::gravity) {
 
-				xTools::WriteFloat(vars::sv_gravity, 100.0f);
+				xTools::Memory::WriteFloat(vars::sv_gravity, 100.0f);
 				SendCommand("say Low Gravity Enabled");
 				vars::gravity = true;
 			}
 			else {
 
-				xTools::WriteFloat(vars::sv_gravity, 800.0f);
+				xTools::Memory::WriteFloat(vars::sv_gravity, 800.0f);
 				SendCommand("say Low Gravity Disabled");
 				vars::gravity = false;
 			}
@@ -150,13 +150,13 @@ namespace CSGO {
 
 			if (!vars::showFps) {
 
-				xTools::WriteUInt8(vars::cl_showFPS, 0x4);
+				xTools::Memory::WriteUInt8(vars::cl_showFPS, 0x4);
 				SendCommand("cl_showfps 4;cl_showpos 1;+graph;say Show Debug Info Enabled");
 				vars::showFps = true;
 			}
 			else {
 
-				xTools::WriteUInt8(vars::cl_showFPS, 0x0);
+				xTools::Memory::WriteUInt8(vars::cl_showFPS, 0x0);
 				SendCommand("cl_showfps 0;cl_showpos 0;-graph;say Show Debug Info Disabled");
 				vars::showFps = false;
 			}
@@ -167,13 +167,13 @@ namespace CSGO {
 
 			if (!vars::friction) {
 
-				xTools::WriteFloat(vars::sv_friction, 0.5f);
+				xTools::Memory::WriteFloat(vars::sv_friction, 0.5f);
 				SendCommand("say Slippery Floor Enabled");
 				vars::friction = true;
 			}
 			else {
 
-				xTools::WriteFloat(vars::sv_friction, 4.0f);
+				xTools::Memory::WriteFloat(vars::sv_friction, 4.0f);
 				SendCommand("say Slippery Floor Disabled");
 				vars::friction = false;
 			}

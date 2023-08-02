@@ -18,6 +18,8 @@
 #include "EnemyTerritory.h"
 #include "SaintsRow.h"
 #include "SaintsRow2.h"
+#include "SaintsRow3.h"
+#include "SleepingDogs.h"
 #include "SonicAdventure.h"
 #include "TheClub.h"
 

@@ -61,22 +61,22 @@ namespace Crackdown {
     namespace funcs {
 
         void Fps() {
-            xTools::WriteUInt32(vars::_showFps, vars::dword_on);
-            xTools::WriteUInt8(vars::showgputiming, vars::byte_on);
+            xTools::Memory::WriteUInt32(vars::_showFps, vars::dword_on);
+            xTools::Memory::WriteUInt8(vars::showgputiming, vars::byte_on);
         }
 
         void GodMode() {
-            xTools::WriteUInt32(vars::godMode, vars::nop);
+            xTools::Memory::WriteUInt32(vars::godMode, vars::nop);
         }
 
         bool Graphs() {
             if (!vars::graphs) {
-                xTools::WriteUInt8(vars::perfgraph, vars::byte_on);
+                xTools::Memory::WriteUInt8(vars::perfgraph, vars::byte_on);
                 xTools::Xam::PulseController();
                 vars::graphs = true;
             }
             else {
-                xTools::WriteUInt8(vars::perfgraph, vars::byte_off);
+                xTools::Memory::WriteUInt8(vars::perfgraph, vars::byte_off);
                 xTools::Xam::PulseController();
                 vars::graphs = false;
             }
@@ -84,17 +84,17 @@ namespace Crackdown {
         }
 
         void InfiniteAmmo() {
-            xTools::WriteUInt32(vars::ammo, vars::ammo_on);
+            xTools::Memory::WriteUInt32(vars::ammo, vars::ammo_on);
         }
 
         bool Outlines() {
             if (!vars::drawOutlines) {
-                xTools::WriteUInt32(vars::outlinemode, vars::outlineMode);
+                xTools::Memory::WriteUInt32(vars::outlinemode, vars::outlineMode);
                 xTools::Xam::PulseController();
                 vars::drawOutlines = true;
             }
             else {
-                xTools::WriteUInt32(vars::outlinemode, vars::dword_off);
+                xTools::Memory::WriteUInt32(vars::outlinemode, vars::dword_off);
                 xTools::Xam::PulseController();
                 vars::drawOutlines = false;
             }
@@ -116,10 +116,10 @@ namespace Crackdown {
             GodMode();
             Fps();
             InfiniteAmmo();
-            xTools::WriteUInt8(vars::vsync, vars::byte_off);
-            xTools::WriteUInt8(vars::spawntiming, vars::byte_off);
-            xTools::WriteUInt8(vars::toggleafterlights, vars::byte_off);
-            xTools::WriteUInt8(vars::togglebloom, vars::byte_off);
+            xTools::Memory::WriteUInt8(vars::vsync, vars::byte_off);
+            xTools::Memory::WriteUInt8(vars::spawntiming, vars::byte_off);
+            xTools::Memory::WriteUInt8(vars::toggleafterlights, vars::byte_off);
+            xTools::Memory::WriteUInt8(vars::togglebloom, vars::byte_off);
         }
     }
 

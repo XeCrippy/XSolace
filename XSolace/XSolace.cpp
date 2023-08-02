@@ -66,6 +66,14 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 		Sleep(15000);
 		SaintsRow2::_SR2::LoadPlugin();
 		break;
+	case xTools::GAME_SAINTSROW3:
+		Sleep(15000);
+		SaintsRow3::SR3::LoadPlugin();
+		break;
+	case xTools::GAME_SLEEPINGDOGS:
+		Sleep(15000);
+		SleepingDogs::_SleepingDogs::LoadPlugin();
+		break;
 	case xTools::GAME_THECLUB:
 		Sleep(15000);
 		TheClub::_TheClub::LoadPlugin();
