@@ -1,8 +1,8 @@
 #pragma once
 #include "stdafx.h"
 
-namespace SaintsRow3 {
-	class SR3 {
+namespace SaintsRowGOH {
+	class SRGatOuttaHell {
 	public:
 		static void LoadPlugin();
 	};

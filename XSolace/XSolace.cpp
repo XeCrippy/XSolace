@@ -70,6 +70,10 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 		Sleep(15000);
 		SaintsRow3::SR3::LoadPlugin();
 		break;
+	case xTools::GAME_SAINTSROWGOH:
+		Sleep(15000);
+		SaintsRowGOH::SRGatOuttaHell::LoadPlugin();
+		break;
 	case xTools::GAME_SLEEPINGDOGS:
 		Sleep(15000);
 		SleepingDogs::_SleepingDogs::LoadPlugin();

@@ -256,7 +256,7 @@
       <ConfigurationFile>xsolace.xml</ConfigurationFile>
     </ImageXex>
     <Deploy>
-      <DeploymentType>EmulateDvd</DeploymentType>
+      <DeploymentType>CopyToHardDrive</DeploymentType>
     </Deploy>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -277,6 +277,7 @@
     <ClInclude Include="SaintsRow.h" />
     <ClInclude Include="SaintsRow2.h" />
     <ClInclude Include="SaintsRow3.h" />
+    <ClInclude Include="SaintsRowGOH.h" />
     <ClInclude Include="SleepingDogs.h" />
     <ClInclude Include="SMC.h" />
     <ClInclude Include="SonicAdventure.h" />
@@ -298,6 +299,7 @@
     <ClCompile Include="SaintsRow.cpp" />
     <ClCompile Include="SaintsRow2.cpp" />
     <ClCompile Include="SaintsRow3.cpp" />
+    <ClCompile Include="SaintsRowGOH.cpp" />
     <ClCompile Include="SleepingDogs.cpp" />
     <ClCompile Include="SMC.cpp" />
     <ClCompile Include="SonicAdventure.cpp" />

@@ -171,11 +171,6 @@ namespace Crackdown {
 
             if (XInputGetState(0, &state) == ERROR_SUCCESS) {
 
-                if (state.Gamepad.wButtons & XINPUT_GAMEPAD_LEFT_SHOULDER && state.Gamepad.wButtons & XINPUT_GAMEPAD_RIGHT_SHOULDER) {
-
-                    MessageBox();
-                    hasToggled = true;
-                }
                 if (state.Gamepad.wButtons & XINPUT_GAMEPAD_DPAD_LEFT && state.Gamepad.wButtons & XINPUT_GAMEPAD_X) {
 
                     funcs::Outlines();

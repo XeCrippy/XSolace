@@ -19,6 +19,7 @@
 #include "SaintsRow.h"
 #include "SaintsRow2.h"
 #include "SaintsRow3.h"
+#include "SaintsRowGOH.h"
 #include "SleepingDogs.h"
 #include "SonicAdventure.h"
 #include "TheClub.h"

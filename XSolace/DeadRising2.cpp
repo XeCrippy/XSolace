@@ -105,7 +105,7 @@ namespace DeadRising2 {
 		uint32_t buttonPressedIndex = 0;
 		uint32_t result = xTools::Xam::ShowMessageBox(
 			L"Dead Rising 2 Test",
-			L"Page 1 Test",
+			L"Page 1 Test....Coming Soon",
 			buttonLabels,
 			ARRAYSIZE(buttonLabels),
 			&buttonPressedIndex,

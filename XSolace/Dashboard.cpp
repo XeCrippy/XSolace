@@ -2,13 +2,42 @@
 
 XINPUT_STATE state;
 
+const wchar_t* MainPage() {
+    std::wstring newLine = L"\r\n";
+    std::wstring mainPage;
+    mainPage += L"Current Games :";
+    mainPage += newLine;
+    mainPage += L"[*] Crackdown";
+    mainPage += newLine;
+    mainPage += L"[*] Counter Strike : GO";
+    mainPage += newLine;
+    mainPage += L"[*] Enemy Territory : Quake Wars";
+    mainPage += newLine;
+    mainPage += L"[*] Saints Row";
+    mainPage += newLine;
+    mainPage += L"[*] Saints Row 2";
+    mainPage += newLine;
+    mainPage += L"[*] Saints Row The Third";
+    mainPage += newLine;
+    mainPage += L"[*] Saints Row Gat Outta Hell";
+    mainPage += newLine;
+    mainPage += L"[*] Sleeping Dogs";
+    mainPage += newLine;
+    mainPage += L"[*] Sonic Adventure";
+    mainPage += newLine;
+    mainPage += L"[*] The Club";
+    mainPage += newLine + newLine;
+    mainPage += L"Author : XeCrippy";
+    return mainPage.c_str();
+}
+
 void MsgBox() {
 
-    const wchar_t* buttonLabels[] = { L"Change Power LED", L"Reboot", L"Close"};
+    const wchar_t* buttonLabels[] = {L"Continue", L"Reboot Console", L"Close"};
     uint32_t buttonPressedIndex = 0;
     uint32_t result = xTools::Xam::ShowMessageBox(
-        L"Dashboard Testing",
-        L"Testing",
+        L"xSolace 360 Multi-Game Plugin",
+        MainPage(),
         buttonLabels,
         ARRAYSIZE(buttonLabels),
         &buttonPressedIndex,
@@ -18,16 +47,8 @@ void MsgBox() {
     if (result == ERROR_SUCCESS) {
 
         switch (buttonPressedIndex) {
-
-        case 0:
-            Sleep(100);
-            xTools::SMC::SetPowerLED(xTools::PowerLED_Blink, true);
-            break;
         case 1:
-            Sleep(100);
             xTools::Xam::Reboot();
-            break;
-        case 2:
             break;
         default:
             break;
