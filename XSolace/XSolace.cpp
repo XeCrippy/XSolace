@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "XSolace.h"
-#include "Memory.h"
+#include "../XSolace/Lib/Memory.h"
 
 bool PluginMain::s_Running = false;
 uint32_t PluginMain::s_CurrentTitleId = 0;
