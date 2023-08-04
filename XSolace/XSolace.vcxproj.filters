@@ -30,61 +30,61 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Lib\Formatter.h">
+    <ClInclude Include="Formatter.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="Lib\Log.h">
+    <ClInclude Include="Log.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="Lib\Memory.h">
+    <ClInclude Include="Memory.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="Lib\SMC.h">
+    <ClInclude Include="SMC.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="Lib\XAM.h">
+    <ClInclude Include="XAM.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="XSolace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Games\Dashboard.h">
+    <ClInclude Include="Dashboard.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\SonicAdventure.h">
+    <ClInclude Include="SonicAdventure.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\Crackdown.h">
+    <ClInclude Include="Crackdown.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\CSGO.h">
+    <ClInclude Include="CSGO.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\SaintsRow.h">
+    <ClInclude Include="SaintsRow.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\SaintsRow2.h">
+    <ClInclude Include="SaintsRow2.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\EnemyTerritory.h">
+    <ClInclude Include="EnemyTerritory.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\TheClub.h">
+    <ClInclude Include="TheClub.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\DeadRising2.h">
+    <ClInclude Include="DeadRising2.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\SleepingDogs.h">
+    <ClInclude Include="SleepingDogs.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\SaintsRow3.h">
+    <ClInclude Include="SaintsRow3.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\SaintsRowGOH.h">
+    <ClInclude Include="SaintsRowGOH.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Games\SonicGenerations.h">
+    <ClInclude Include="SonicGenerations.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
     <ClInclude Include="includes.h">
@@ -98,58 +98,58 @@
     <ClCompile Include="XSolace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Lib\Formatter.cpp">
+    <ClCompile Include="Formatter.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="Lib\Log.cpp">
+    <ClCompile Include="Log.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="Lib\Memory.cpp">
+    <ClCompile Include="Memory.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="Lib\SMC.cpp">
+    <ClCompile Include="SMC.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="Lib\XAM.cpp">
+    <ClCompile Include="XAM.cpp">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="Games\Dashboard.cpp">
+    <ClCompile Include="Dashboard.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\SonicAdventure.cpp">
+    <ClCompile Include="SonicAdventure.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\Crackdown.cpp">
+    <ClCompile Include="Crackdown.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\CSGO.cpp">
+    <ClCompile Include="CSGO.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\SaintsRow.cpp">
+    <ClCompile Include="SaintsRow.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\SaintsRow2.cpp">
+    <ClCompile Include="SaintsRow2.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\EnemyTerritory.cpp">
+    <ClCompile Include="EnemyTerritory.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\TheClub.cpp">
+    <ClCompile Include="TheClub.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\DeadRising2.cpp">
+    <ClCompile Include="DeadRising2.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\SleepingDogs.cpp">
+    <ClCompile Include="SleepingDogs.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\SaintsRow3.cpp">
+    <ClCompile Include="SaintsRow3.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\SaintsRowGOH.cpp">
+    <ClCompile Include="SaintsRowGOH.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Games\SonicGenerations.cpp">
+    <ClCompile Include="SonicGenerations.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
   </ItemGroup>

@@ -228,7 +228,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_LTCG|Xbox 360'">
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <StringPooling>true</StringPooling>
@@ -241,6 +241,8 @@
       <PreprocessorDefinitions>NDEBUG;_XBOX;LTCG</PreprocessorDefinitions>
       <DisableSpecificWarnings>4481</DisableSpecificWarnings>
       <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -264,45 +266,45 @@
     <None Include="xsolace.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Games\Crackdown.h" />
-    <ClInclude Include="Games\CSGO.h" />
-    <ClInclude Include="Games\Dashboard.h" />
+    <ClInclude Include="Crackdown.h" />
+    <ClInclude Include="CSGO.h" />
+    <ClInclude Include="Dashboard.h" />
     <ClInclude Include="includes.h" />
-    <ClInclude Include="Games\DeadRising2.h" />
-    <ClInclude Include="Games\EnemyTerritory.h" />
-    <ClInclude Include="Lib\Formatter.h" />
-    <ClInclude Include="Lib\Log.h" />
-    <ClInclude Include="Lib\Memory.h" />
-    <ClInclude Include="Games\SaintsRow.h" />
-    <ClInclude Include="Games\SaintsRow2.h" />
-    <ClInclude Include="Games\SaintsRow3.h" />
-    <ClInclude Include="Games\SaintsRowGOH.h" />
-    <ClInclude Include="Games\SleepingDogs.h" />
-    <ClInclude Include="Lib\SMC.h" />
-    <ClInclude Include="Games\SonicAdventure.h" />
-    <ClInclude Include="Games\SonicGenerations.h" />
+    <ClInclude Include="DeadRising2.h" />
+    <ClInclude Include="EnemyTerritory.h" />
+    <ClInclude Include="Formatter.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="SaintsRow.h" />
+    <ClInclude Include="SaintsRow2.h" />
+    <ClInclude Include="SaintsRow3.h" />
+    <ClInclude Include="SaintsRowGOH.h" />
+    <ClInclude Include="SleepingDogs.h" />
+    <ClInclude Include="SMC.h" />
+    <ClInclude Include="SonicAdventure.h" />
+    <ClInclude Include="SonicGenerations.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Games\TheClub.h" />
-    <ClInclude Include="Lib\XAM.h" />
+    <ClInclude Include="TheClub.h" />
+    <ClInclude Include="XAM.h" />
     <ClInclude Include="XSolace.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Games\Crackdown.cpp" />
-    <ClCompile Include="Games\CSGO.cpp" />
-    <ClCompile Include="Games\Dashboard.cpp" />
-    <ClCompile Include="Games\DeadRising2.cpp" />
-    <ClCompile Include="Games\EnemyTerritory.cpp" />
-    <ClCompile Include="Lib\Formatter.cpp" />
-    <ClCompile Include="Lib\Log.cpp" />
-    <ClCompile Include="Lib\Memory.cpp" />
-    <ClCompile Include="Games\SaintsRow.cpp" />
-    <ClCompile Include="Games\SaintsRow2.cpp" />
-    <ClCompile Include="Games\SaintsRow3.cpp" />
-    <ClCompile Include="Games\SaintsRowGOH.cpp" />
-    <ClCompile Include="Games\SleepingDogs.cpp" />
-    <ClCompile Include="Lib\SMC.cpp" />
-    <ClCompile Include="Games\SonicAdventure.cpp" />
-    <ClCompile Include="Games\SonicGenerations.cpp" />
+    <ClCompile Include="Crackdown.cpp" />
+    <ClCompile Include="CSGO.cpp" />
+    <ClCompile Include="Dashboard.cpp" />
+    <ClCompile Include="DeadRising2.cpp" />
+    <ClCompile Include="EnemyTerritory.cpp" />
+    <ClCompile Include="Formatter.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="SaintsRow.cpp" />
+    <ClCompile Include="SaintsRow2.cpp" />
+    <ClCompile Include="SaintsRow3.cpp" />
+    <ClCompile Include="SaintsRowGOH.cpp" />
+    <ClCompile Include="SleepingDogs.cpp" />
+    <ClCompile Include="SMC.cpp" />
+    <ClCompile Include="SonicAdventure.cpp" />
+    <ClCompile Include="SonicGenerations.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='CodeAnalysis|Xbox 360'">Create</PrecompiledHeader>
@@ -311,8 +313,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_LTCG|Xbox 360'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Games\TheClub.cpp" />
-    <ClCompile Include="Lib\XAM.cpp" />
+    <ClCompile Include="TheClub.cpp" />
+    <ClCompile Include="XAM.cpp" />
     <ClCompile Include="XSolace.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
