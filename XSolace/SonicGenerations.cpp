@@ -35,6 +35,7 @@ namespace SonicGenerations {
 
 		void AddRings(int rings) {
 			uint32_t ringsAddr = xTools::Memory::Read<uint32_t>(vars::ringsPtr) + vars::ringsOffset;
+			xTools::Memory::Write<uint32_t>(ringsAddr, rings);
 			xTools::Xam::PulseController();
 		}
 
@@ -97,8 +98,8 @@ namespace SonicGenerations {
 		mainPage += L"Add 999 Rings : D_LEFT+Y";
 		mainPage += newLine;
 		mainPage += L"Add 99 Lives : D_LEFT+B";
-		mainPage + newLine;
-		mainPage += L"Ring Pickup Multiplier : D_UP+A";
+		mainPage += newLine;
+		mainPage += L"Ring Multiplier : D_UP+A";
 		mainPage += newLine;
 		mainPage += L"Freeze Timer : D_UP+X";
 		return mainPage.c_str();
@@ -106,7 +107,7 @@ namespace SonicGenerations {
 
 	const wchar_t* MainTitle = L"Sonic Generations TU2";
 
-	void ShowMainPage() {
+	void _SonicGenerations::ShowMainPage() {
 
 		const wchar_t* buttonLabels[] = { L"Continue",  L"Close" };
 		uint32_t buttonPressedIndex = 0;
