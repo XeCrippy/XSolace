@@ -27,6 +27,7 @@
 #include "SaintsRowGOH.h"
 #include "SleepingDogs.h"
 #include "SonicAdventure.h"
+#include "SonicGenerations.h"
 #include "TheClub.h"
 
 

@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "XSolace.h"
-#include "Memory.h"
 
 bool PluginMain::s_Running = false;
 uint32_t PluginMain::s_CurrentTitleId = 0;
@@ -77,6 +76,10 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 	case xTools::GAME_SLEEPINGDOGS:
 		Sleep(15000);
 		SleepingDogs::_SleepingDogs::LoadPlugin();
+		break;
+	case xTools::GAME_SONICGENERATIONS:
+		Sleep(15000);
+		SonicGenerations::_SonicGenerations::LoadPlugin();
 		break;
 	case xTools::GAME_THECLUB:
 		Sleep(15000);
