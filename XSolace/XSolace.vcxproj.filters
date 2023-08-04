@@ -87,9 +87,6 @@
     <ClInclude Include="SonicGenerations.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="includes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

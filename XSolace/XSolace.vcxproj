@@ -269,7 +269,6 @@
     <ClInclude Include="Crackdown.h" />
     <ClInclude Include="CSGO.h" />
     <ClInclude Include="Dashboard.h" />
-    <ClInclude Include="includes.h" />
     <ClInclude Include="DeadRising2.h" />
     <ClInclude Include="EnemyTerritory.h" />
     <ClInclude Include="Formatter.h" />
