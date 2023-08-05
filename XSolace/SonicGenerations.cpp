@@ -6,6 +6,7 @@ namespace SonicGenerations {
 	namespace vars {
 
 		bool infRings = false;
+		bool points = false;
 		bool ringMultiply = false;
 		bool timerFreeze = false;
 
@@ -14,6 +15,9 @@ namespace SonicGenerations {
 		uint32_t infiniteRings = 0x8289FCA4;
 		uint32_t infiniteRings_off = 0x7D7E5850;
 		uint32_t infiniteRings_on = 0x396B0000;
+		uint32_t pointsMultiplier = 0x82A2F32C;
+		uint32_t pointsMultiplier_off = 0x7D4A2214;
+		uint32_t pointsMultiplier_on = 0x394A2710;
 		uint32_t ringMultiplier = 0x828A3F24;
 		uint32_t ringMultiplier_off = 0x7D6BF214;
 		uint32_t ringMultiplier_on = 0x396B000A;
@@ -71,6 +75,22 @@ namespace SonicGenerations {
 			return vars::infRings;
 		}
 
+		bool PointsMultiplier() {
+			if (!vars::points) {
+				xTools::Memory::Write<uint32_t>(vars::pointsMultiplier, vars::pointsMultiplier_on);
+				xTools::Xam::PulseController();
+				xTools::Xam::XNotify("Points Multiplier : Enabled");
+				vars::points = true;
+			}
+			else {
+				xTools::Memory::Write<uint32_t>(vars::pointsMultiplier, vars::pointsMultiplier_off);
+				xTools::Xam::PulseController();
+				xTools::Xam::XNotify("Points Multiplier : Disabled");
+				vars::points = false;
+			}
+			return vars::points;
+		}
+
 		bool RingsMultiplier() {
 			if (!vars::ringMultiply) {
 				xTools::Memory::Write<uint32_t>(vars::ringMultiplier, vars::ringMultiplier_on);
@@ -97,7 +117,7 @@ namespace SonicGenerations {
 		mainPage += newLine;
 		mainPage += L"Add 999 Rings : D_LEFT+Y";
 		mainPage += newLine;
-		mainPage += L"Add 99 Lives : D_LEFT+B";
+		mainPage += L"Points Multiplier : D_LEFT+B";
 		mainPage += newLine;
 		mainPage += L"Ring Multiplier : D_UP+A";
 		mainPage += newLine;
@@ -158,7 +178,7 @@ namespace SonicGenerations {
 				}
 				if (state.Gamepad.wButtons & XINPUT_GAMEPAD_DPAD_LEFT && state.Gamepad.wButtons & XINPUT_GAMEPAD_B) {
 
-					funcs::_AddLives(99);
+					funcs::PointsMultiplier();
 					hasToggled = true;
 				}
 				if (state.Gamepad.wButtons & XINPUT_GAMEPAD_DPAD_UP && state.Gamepad.wButtons & XINPUT_GAMEPAD_A) {
