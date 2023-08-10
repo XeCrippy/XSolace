@@ -37,10 +37,18 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 		Sleep(3000);
 		Dashboard::Init();
         break;
+	case xTools::GAME_XEXMENU:
+		Sleep(3000);
+		xTools::Xam::XNotify("xSolace 360 : Xex Menu Loaded");
+		break;
 	case xTools::GAME_SONICADVENTURE:
 		Sleep(10000);
 		SonicAdventure::Sonic::LoadPlugin();
         break;
+	case xTools::GAME_COD3:
+		Sleep(15000);
+		COD3::Cod3::LoadPlugin();
+		break;
 	case xTools::GAME_CRACKDOWN:
 		Sleep(15000);
 		Crackdown::_Crackdown::LoadPlugin();
@@ -49,13 +57,13 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 		Sleep(15000);
 		CSGO::CounterStrike::LoadPlugin();
 		break;
-	case xTools::GAME_DEADRISING2:
-		Sleep(15000);
-		DeadRising2::_DeadRising2::LoadPlugin();
-		break;
 	case xTools::GAME_ENEMYTERRITORY:
 		Sleep(15000);
 		EnemyTerritory::_EnemyTerritory::LoadPlugin();
+		break;
+	case xTools::GAME_MAFIA2:
+		Sleep(15000);
+		Mafia2::_Mafia2::LoadPlugin();
 		break;
 	case xTools::GAME_SAINTSROW:
 		Sleep(15000);

@@ -24,6 +24,7 @@ namespace SonicAdventure {
 		void(__fastcall* SetTotalRing)(uint32_t num) = reinterpret_cast<void(__fastcall*)(uint32_t num)>(0x82259698);
 		void(__fastcall* SleepTimer)() = reinterpret_cast<void(__fastcall*)()>(0x82259D20);
 		void(__fastcall* WakeTimer)() = reinterpret_cast<void(__fastcall*)()>(0x82259D10);
+		bool(*WriteAchievements)(uint32_t ptr, int userIndex, int achievementID, bool isAsync) = reinterpret_cast<bool(*)(uint32_t ptr, int userIndex, int achievementID, bool isAsync)>(0x8277F718);
 	}
 
 	namespace funcs {
@@ -74,6 +75,13 @@ namespace SonicAdventure {
 			}
 			return vars::timer;
 		}
+
+		void UnlockAchievements() {
+			for (int i = 0; i < 20; i++) {
+				gameFuncs::WriteAchievements(0x4001F010, 0, i, true);
+				Sleep(300);
+			}
+		}
 	}
 
 	namespace pages {
@@ -82,11 +90,13 @@ namespace SonicAdventure {
 
 			std::wstring newLine = L"\r\n";
 			std::wstring welcomePage;
-			welcomePage += L"Infinite Rings : Dpad-Left+A";
+			welcomePage += L"Infinite Rings : Dpad_Left+A";
 			welcomePage += newLine;
-			welcomePage += L"Toggle Timer : Dpad-Left+X";
+			welcomePage += L"Toggle Timer : Dpad_Left+X";
 			welcomePage += newLine;
-			welcomePage += L"Give 999 Rings : Dpad-Left+Y";
+			welcomePage += L"Give 999 Rings : Dpad_Left+Y";
+			welcomePage += newLine;
+			welcomePage += L"Unlock All Achievements : Dpad_Left+B";
 			welcomePage += newLine + newLine;
 			welcomePage += L"Return Here : Dpad-LB+RB";
 			return welcomePage.c_str();
@@ -139,6 +149,11 @@ namespace SonicAdventure {
 				if (state.Gamepad.wButtons & XINPUT_GAMEPAD_DPAD_LEFT && state.Gamepad.wButtons & XINPUT_GAMEPAD_Y) {
 
 					funcs::Add999Rings();
+					hasToggled = true;
+				}
+				if (state.Gamepad.wButtons & XINPUT_GAMEPAD_DPAD_LEFT && state.Gamepad.wButtons & XINPUT_GAMEPAD_B) {
+
+					funcs::UnlockAchievements();
 					hasToggled = true;
 				}
 			}

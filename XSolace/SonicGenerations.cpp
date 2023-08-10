@@ -29,6 +29,7 @@ namespace SonicGenerations {
 
 	namespace gameFuncs {
 		int(__fastcall* AddLives)(int result, int a2) = reinterpret_cast<int(__fastcall*)(int result, int a2)>(0x82A30A78);
+		
 	}
 
 	namespace funcs {

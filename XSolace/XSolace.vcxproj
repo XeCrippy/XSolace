@@ -266,6 +266,7 @@
     <None Include="xsolace.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="COD3.h" />
     <ClInclude Include="Crackdown.h" />
     <ClInclude Include="CSGO.h" />
     <ClInclude Include="Dashboard.h" />
@@ -273,6 +274,7 @@
     <ClInclude Include="EnemyTerritory.h" />
     <ClInclude Include="Formatter.h" />
     <ClInclude Include="Log.h" />
+    <ClInclude Include="Mafia2.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="SaintsRow.h" />
     <ClInclude Include="SaintsRow2.h" />
@@ -288,6 +290,7 @@
     <ClInclude Include="XSolace.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="COD3.cpp" />
     <ClCompile Include="Crackdown.cpp" />
     <ClCompile Include="CSGO.cpp" />
     <ClCompile Include="Dashboard.cpp" />
@@ -295,6 +298,7 @@
     <ClCompile Include="EnemyTerritory.cpp" />
     <ClCompile Include="Formatter.cpp" />
     <ClCompile Include="Log.cpp" />
+    <ClCompile Include="Mafia2.cpp" />
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="SaintsRow.cpp" />
     <ClCompile Include="SaintsRow2.cpp" />

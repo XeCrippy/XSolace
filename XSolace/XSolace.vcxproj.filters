@@ -87,6 +87,12 @@
     <ClInclude Include="SonicGenerations.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
+    <ClInclude Include="COD3.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
+    <ClInclude Include="Mafia2.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -147,6 +153,12 @@
       <Filter>Source Files\Games</Filter>
     </ClCompile>
     <ClCompile Include="SonicGenerations.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="COD3.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="Mafia2.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
   </ItemGroup>

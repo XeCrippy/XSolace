@@ -21,6 +21,8 @@
 #include "Dashboard.h"
 #include "DeadRising2.h"
 #include "EnemyTerritory.h"
+#include "COD3.h"
+#include "Mafia2.h"
 #include "SaintsRow.h"
 #include "SaintsRow2.h"
 #include "SaintsRow3.h"
