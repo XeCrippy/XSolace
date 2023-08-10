@@ -5,10 +5,10 @@ namespace COD3 {
 
 	bool minicon;
 
-    void (*Cbuf_AddText)(int clientIndex, const char* cmd) = reinterpret_cast<void(*)(int, const char*)>(0x8233EF10);
+    void (*Cbuf_ExecuteText)(int clientIndex, const char* cmd) = reinterpret_cast<void(*)(int, const char*)>(0x8233EF10);
 
 	void SendCommand(const char* cmd) {
-		Cbuf_AddText(0, cmd);
+		Cbuf_ExecuteText(0, cmd);
 	}
 
 	bool MiniCon() {
