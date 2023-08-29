@@ -266,11 +266,14 @@
     <None Include="xsolace.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Brink.h" />
     <ClInclude Include="COD3.h" />
     <ClInclude Include="Crackdown.h" />
+    <ClInclude Include="Crysis.h" />
     <ClInclude Include="CSGO.h" />
     <ClInclude Include="Dashboard.h" />
     <ClInclude Include="DeadRising2.h" />
+    <ClInclude Include="Doom3.h" />
     <ClInclude Include="EnemyTerritory.h" />
     <ClInclude Include="Formatter.h" />
     <ClInclude Include="Log.h" />
@@ -279,6 +282,7 @@
     <ClInclude Include="SaintsRow.h" />
     <ClInclude Include="SaintsRow2.h" />
     <ClInclude Include="SaintsRow3.h" />
+    <ClInclude Include="SaintsRow4.h" />
     <ClInclude Include="SaintsRowGOH.h" />
     <ClInclude Include="SleepingDogs.h" />
     <ClInclude Include="SMC.h" />
@@ -290,11 +294,14 @@
     <ClInclude Include="XSolace.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Brink.cpp" />
     <ClCompile Include="COD3.cpp" />
     <ClCompile Include="Crackdown.cpp" />
+    <ClCompile Include="Crysis.cpp" />
     <ClCompile Include="CSGO.cpp" />
     <ClCompile Include="Dashboard.cpp" />
     <ClCompile Include="DeadRising2.cpp" />
+    <ClCompile Include="Doom3.cpp" />
     <ClCompile Include="EnemyTerritory.cpp" />
     <ClCompile Include="Formatter.cpp" />
     <ClCompile Include="Log.cpp" />
@@ -303,6 +310,7 @@
     <ClCompile Include="SaintsRow.cpp" />
     <ClCompile Include="SaintsRow2.cpp" />
     <ClCompile Include="SaintsRow3.cpp" />
+    <ClCompile Include="SaintsRow4.cpp" />
     <ClCompile Include="SaintsRowGOH.cpp" />
     <ClCompile Include="SleepingDogs.cpp" />
     <ClCompile Include="SMC.cpp" />

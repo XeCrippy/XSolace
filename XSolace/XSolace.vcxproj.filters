@@ -93,6 +93,18 @@
     <ClInclude Include="Mafia2.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
+    <ClInclude Include="SaintsRow4.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
+    <ClInclude Include="Brink.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
+    <ClInclude Include="Doom3.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
+    <ClInclude Include="Crysis.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -159,6 +171,18 @@
       <Filter>Source Files\Games</Filter>
     </ClCompile>
     <ClCompile Include="Mafia2.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="SaintsRow4.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="Brink.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="Doom3.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="Crysis.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
   </ItemGroup>

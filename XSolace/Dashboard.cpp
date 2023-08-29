@@ -9,7 +9,11 @@ const wchar_t* MainPage() {
     mainPage += newLine;
     mainPage += L"[*] Crackdown";
     mainPage += newLine;
+    mainPage += L"[*] Crysis";
+    mainPage += newLine;
     mainPage += L"[*] Counter Strike : GO";
+    mainPage += newLine;
+    mainPage += L"[*] Doom 3 BFG";
     mainPage += newLine;
     mainPage += L"[*] Enemy Territory : Quake Wars";
     mainPage += newLine;
@@ -19,20 +23,22 @@ const wchar_t* MainPage() {
     mainPage += newLine;
     mainPage += L"[*] Saints Row The Third";
     mainPage += newLine;
+    mainPage += L"[*] Saints Row IV";
+    mainPage += newLine;
     mainPage += L"[*] Saints Row Gat Outta Hell";
-    mainPage += newLine;
-    mainPage += L"[*] Sleeping Dogs";
-    mainPage += newLine;
-    mainPage += L"[*] Sonic Adventure";
-    mainPage += newLine;
-    mainPage += L"[*] Sonic Generations";
     return mainPage.c_str();
 }
 
 const wchar_t* Page2() {
     std::wstring newLine = L"\r\n";
     std::wstring page2;
-    page2 += L"The Club";
+    page2 += L"[*] Sleeping Dogs";
+    page2 += newLine;
+    page2 += L"[*] Sonic Adventure";
+    page2 += newLine;
+    page2 += L"[*] Sonic Generations";
+    page2 += newLine;
+    page2 += L"[*] The Club";
     page2 += newLine + newLine;
     page2 += L"Author : XeCrippy";
     return page2.c_str();
@@ -95,7 +101,7 @@ void Dashboard::ShowMainPage() {
 
 void Dashboard::Init()
 {
-    xTools::Xam::XNotify("xSolace 360 : Dashboard Loaded");
+    xTools::Xam::XNotify("xSolace 360 : Dashboard Loaded. Press LB+RB to view info");
 
     while (xTools::Xam::GetCurrentTitleId() == xTools::GAME_DASHBOARD) {
 

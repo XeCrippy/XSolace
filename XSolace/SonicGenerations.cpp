@@ -132,7 +132,7 @@ namespace SonicGenerations {
 
 		const wchar_t* buttonLabels[] = { L"Continue",  L"Close" };
 		uint32_t buttonPressedIndex = 0;
-		uint32_t result = xTools::Xam::ShowMessageBox(
+		xTools::Xam::ShowMessageBox(
 			MainTitle,
 			MainPage(),
 			buttonLabels,

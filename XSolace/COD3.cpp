@@ -5,7 +5,7 @@ namespace COD3 {
 
 	bool minicon;
 
-    void (*Cbuf_ExecuteText)(int clientIndex, const char* cmd) = reinterpret_cast<void(*)(int, const char*)>(0x8233EF10);
+    void (*Cbuf_ExecuteText)(int clientIndex, const char* cmd) = reinterpret_cast<void(*)(int, const char*)>(0x8247DBC8); 
 
 	void SendCommand(const char* cmd) {
 		Cbuf_ExecuteText(0, cmd);
@@ -63,7 +63,6 @@ namespace COD3 {
 
 		 XINPUT_STATE state = { 0 };
 		 ZeroMemory(&state, sizeof(state));
-		 xTools::Xam::XNotify("xSolace 360 Testing : Plugin Loaded");
 
 		 while (xTools::Xam::GetCurrentTitleId() == xTools::GAME_COD3) {
 

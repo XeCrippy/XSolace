@@ -80,7 +80,7 @@ namespace SleepingDogs {
 
 		const wchar_t* buttonLabels[] = { L"Continue",  L"Close" };
 		uint32_t buttonPressedIndex = 0;
-		uint32_t result = xTools::Xam::ShowMessageBox(
+		xTools::Xam::ShowMessageBox(
 			L"Sleeping Dogs TU1",
 			pages::MainPage(),
 			buttonLabels,
