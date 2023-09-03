@@ -1,8 +1,8 @@
 #pragma once
 #include "stdafx.h"
 
-namespace Crysis {
-	class _Crysis {
+namespace Crysis2 {
+	class _Crysis2 {
 	public:
 		static void LoadPlugin();
 	};

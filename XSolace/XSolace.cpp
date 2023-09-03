@@ -58,9 +58,9 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 		Crackdown::_Crackdown::LoadPlugin();
 		break;
 
-	case xTools::GAME_CRYSIS:
+	case xTools::GAME_CRYSIS2:
 		Sleep(15000);
-		Crysis::_Crysis::LoadPlugin();
+		Crysis2::_Crysis2::LoadPlugin();
 		break;
 
 	case xTools::GAME_COUNTERSTRIKE:

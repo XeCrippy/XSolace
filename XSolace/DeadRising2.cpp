@@ -48,7 +48,7 @@ namespace DeadRising2 {
 		}
 
 		void ModPP() {
-			uint32_t currPP = xTools::Memory::ReadUInt32(vars::currentPP);
+			//uint32_t currPP = xTools::Memory::ReadUInt32(vars::currentPP);
 			xTools::Memory::WriteUInt32(vars::currentPP, 999999);
 			xTools::Xam::XNotify("Added 999999 PP");
 			xTools::Xam::PulseController();

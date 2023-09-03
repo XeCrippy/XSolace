@@ -269,7 +269,7 @@
     <ClInclude Include="Brink.h" />
     <ClInclude Include="COD3.h" />
     <ClInclude Include="Crackdown.h" />
-    <ClInclude Include="Crysis.h" />
+    <ClInclude Include="Crysis2.h" />
     <ClInclude Include="CSGO.h" />
     <ClInclude Include="Dashboard.h" />
     <ClInclude Include="DeadRising2.h" />
@@ -297,7 +297,7 @@
     <ClCompile Include="Brink.cpp" />
     <ClCompile Include="COD3.cpp" />
     <ClCompile Include="Crackdown.cpp" />
-    <ClCompile Include="Crysis.cpp" />
+    <ClCompile Include="Crysis2.cpp" />
     <ClCompile Include="CSGO.cpp" />
     <ClCompile Include="Dashboard.cpp" />
     <ClCompile Include="DeadRising2.cpp" />

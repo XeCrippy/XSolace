@@ -102,7 +102,7 @@
     <ClInclude Include="Doom3.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
-    <ClInclude Include="Crysis.h">
+    <ClInclude Include="Crysis2.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
   </ItemGroup>
@@ -182,7 +182,7 @@
     <ClCompile Include="Doom3.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
-    <ClCompile Include="Crysis.cpp">
+    <ClCompile Include="Crysis2.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
   </ItemGroup>
