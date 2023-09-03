@@ -12,7 +12,7 @@ namespace Crysis2 {
 	void(__fastcall *ExecuteStringInternal)(uint32_t consolePtr, const char* command, int bFromConsole, int bSilentMode) = reinterpret_cast<void(__fastcall*)(uint32_t, const char*, int, int)>(0x822D5B68); //0x82286300); crysis1
 
 	void ExecCommand(const char* command) {
-		int cxconsole = *(uint32_t*)0x83AC6E58; //0x837CF198; crysis1
+		uint32_t cxconsole = *(uint32_t*)0x83AC6E58; //0x837CF198; crysis1
 		ExecuteStringInternal(cxconsole, command, 0, 0);
 	}
 
