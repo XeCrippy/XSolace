@@ -9,7 +9,11 @@ const wchar_t* MainPage() {
     mainPage += newLine;
     mainPage += L"[*] Crackdown";
     mainPage += newLine;
+    mainPage += L"[*] Crysis";
+    mainPage += newLine;
     mainPage += L"[*] Crysis 2";
+    mainPage += newLine;
+    mainPage += L"[*] Crysis 3";
     mainPage += newLine;
     mainPage += L"[*] Counter Strike : GO";
     mainPage += newLine;
@@ -23,15 +27,17 @@ const wchar_t* MainPage() {
     mainPage += newLine;
     mainPage += L"[*] Saints Row The Third";
     mainPage += newLine;
-    mainPage += L"[*] Saints Row IV";
-    mainPage += newLine;
-    mainPage += L"[*] Saints Row Gat Outta Hell";
+    
     return mainPage.c_str();
 }
 
 const wchar_t* Page2() {
     std::wstring newLine = L"\r\n";
     std::wstring page2;
+    page2 += L"[*] Saints Row IV";
+    page2 += newLine;
+    page2 += L"[*] Saints Row Gat Outta Hell";
+    page2 += newLine;
     page2 += L"[*] Sleeping Dogs";
     page2 += newLine;
     page2 += L"[*] Sonic Adventure";
