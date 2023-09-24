@@ -396,7 +396,7 @@ namespace CSGO {
 					KeyboardMenu();
 				}
 			}
-			if (hasToggled) Sleep(500);
+			if (hasToggled) Sleep(300);
 		}
 	}
 }

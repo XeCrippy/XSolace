@@ -9,11 +9,7 @@ const wchar_t* MainPage() {
     mainPage += newLine;
     mainPage += L"[*] Crackdown";
     mainPage += newLine;
-    mainPage += L"[*] Crysis";
-    mainPage += newLine;
     mainPage += L"[*] Crysis 2";
-    mainPage += newLine;
-    mainPage += L"[*] Crysis 3";
     mainPage += newLine;
     mainPage += L"[*] Counter Strike : GO";
     mainPage += newLine;

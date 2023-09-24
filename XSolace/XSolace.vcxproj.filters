@@ -105,6 +105,9 @@
     <ClInclude Include="Crysis2.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
+    <ClInclude Include="Left4Dead2.h">
+      <Filter>Header Files\Games</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -183,6 +186,9 @@
       <Filter>Source Files\Games</Filter>
     </ClCompile>
     <ClCompile Include="Crysis2.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
+    <ClCompile Include="Left4Dead2.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
   </ItemGroup>

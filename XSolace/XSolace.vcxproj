@@ -276,6 +276,7 @@
     <ClInclude Include="Doom3.h" />
     <ClInclude Include="EnemyTerritory.h" />
     <ClInclude Include="Formatter.h" />
+    <ClInclude Include="Left4Dead2.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Mafia2.h" />
     <ClInclude Include="Memory.h" />
@@ -304,6 +305,7 @@
     <ClCompile Include="Doom3.cpp" />
     <ClCompile Include="EnemyTerritory.cpp" />
     <ClCompile Include="Formatter.cpp" />
+    <ClCompile Include="Left4Dead2.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Mafia2.cpp" />
     <ClCompile Include="Memory.cpp" />

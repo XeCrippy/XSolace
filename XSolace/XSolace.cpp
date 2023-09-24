@@ -78,6 +78,11 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 		EnemyTerritory::_EnemyTerritory::LoadPlugin();
 		break;
 
+	case xTools::GAME_LEFT4DEAD2:
+		Sleep(15000);
+		Left4Dead2::L4D2::LoadPlugin();
+		break;
+
 	case xTools::GAME_SAINTSROW:
 		Sleep(15000);
 		SaintsRow::_SaintsRow::LoadPlugin();

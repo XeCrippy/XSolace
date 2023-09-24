@@ -15,7 +15,7 @@
 #include "SMC.h"
 #include "XAM.h"
 
-
+#include "COD3.h"
 #include "Crackdown.h"
 #include "Crysis2.h"
 #include "CSGO.h"
@@ -23,7 +23,7 @@
 #include "DeadRising2.h"
 #include "Doom3.h"
 #include "EnemyTerritory.h"
-#include "COD3.h"
+#include "Left4Dead2.h"
 #include "Mafia2.h"
 #include "SaintsRow.h"
 #include "SaintsRow2.h"
