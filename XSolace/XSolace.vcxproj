@@ -258,7 +258,7 @@
       <ConfigurationFile>xsolace.xml</ConfigurationFile>
     </ImageXex>
     <Deploy>
-      <DeploymentType>CopyToHardDrive</DeploymentType>
+      <DeploymentType>EmulateDvd</DeploymentType>
     </Deploy>
   </ItemDefinitionGroup>
   <ItemGroup>
