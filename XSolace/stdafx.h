@@ -34,6 +34,7 @@
 #include "SonicAdventure.h"
 #include "SonicGenerations.h"
 #include "TheClub.h"
+#include "TitleLauncher.h"
 
 
 

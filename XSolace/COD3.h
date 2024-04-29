@@ -4,6 +4,18 @@
 namespace COD3 {
 	class Cod3 {
 	public:
-		static void LoadPlugin();
+	    void LoadPlugin();
+
+	private:
+		bool minicon;
+		bool MiniCon();
+
+		static void (*Cbuf_ExecuteText)(int clientIndex, const char* cmd);
+
+		void KeyboardMenu();
+		void SendCommand(const char* cmd);
+		void ToggleGodMode();
+		void ToggleNoClip();
+		
 	};
 }

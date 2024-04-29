@@ -3,9 +3,12 @@
 
 class Dashboard {
 public:
-	static void Init();
+    void Init();
 
 private:
-	static void ShowMainPage();
-	static void ShowPage2();
+    void ShowMainPage();
+    void ShowPage2();
+
+    const wchar_t* MainPage();
+    const wchar_t* Page2();
 };

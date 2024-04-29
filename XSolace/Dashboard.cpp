@@ -2,7 +2,7 @@
 
 XINPUT_STATE state;
 
-const wchar_t* MainPage() {
+const wchar_t* Dashboard::MainPage() {
     std::wstring newLine = L"\r\n";
     std::wstring mainPage;
     mainPage += L"Current Games :";
@@ -17,6 +17,8 @@ const wchar_t* MainPage() {
     mainPage += newLine;
     mainPage += L"[*] Enemy Territory : Quake Wars";
     mainPage += newLine;
+    mainPage += L"[*] Left 4 Dead 2";
+    mainPage += newLine;
     mainPage += L"[*] Saints Row";
     mainPage += newLine;
     mainPage += L"[*] Saints Row 2";
@@ -27,7 +29,7 @@ const wchar_t* MainPage() {
     return mainPage.c_str();
 }
 
-const wchar_t* Page2() {
+const wchar_t* Dashboard::Page2() {
     std::wstring newLine = L"\r\n";
     std::wstring page2;
     page2 += L"[*] Saints Row IV";
@@ -47,7 +49,7 @@ const wchar_t* Page2() {
 }
 
 void Dashboard::ShowPage2() {
-    const wchar_t* buttonLabels[] = { L"Back", L"Close" };
+    const wchar_t* buttonLabels[] = { L"Back", L"Close"};
     uint32_t buttonPressedIndex = 0;
 
     uint32_t result = xTools::Xam::ShowMessageBox(

@@ -258,15 +258,15 @@
       <ConfigurationFile>xsolace.xml</ConfigurationFile>
     </ImageXex>
     <Deploy>
-      <DeploymentType>EmulateDvd</DeploymentType>
+      <DeploymentType>CopyToHardDrive</DeploymentType>
     </Deploy>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="cpp.hint" />
     <None Include="ReadMe.txt" />
     <None Include="xsolace.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Brink.h" />
     <ClInclude Include="COD3.h" />
     <ClInclude Include="Crackdown.h" />
     <ClInclude Include="Crysis2.h" />
@@ -295,7 +295,6 @@
     <ClInclude Include="XSolace.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Brink.cpp" />
     <ClCompile Include="COD3.cpp" />
     <ClCompile Include="Crackdown.cpp" />
     <ClCompile Include="Crysis2.cpp" />

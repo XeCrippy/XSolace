@@ -35,7 +35,8 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
     {
 	case xTools::GAME_DASHBOARD:
 		Sleep(3000);
-		Dashboard::Init();
+		Dashboard dash;
+		dash.Init();
         break;
 
 	case xTools::GAME_XEXMENU:
@@ -45,27 +46,32 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 
 	case xTools::GAME_SONICADVENTURE:
 		Sleep(10000);
-		SonicAdventure::Sonic::LoadPlugin();
+		SonicAdventure::Sonic sonic;
+		sonic.LoadPlugin();
         break;
 
 	case xTools::GAME_COD3:
 		Sleep(15000);
-		COD3::Cod3::LoadPlugin();
+		COD3::Cod3 cod3;
+		cod3.LoadPlugin();
 		break;
 
 	case xTools::GAME_CRACKDOWN:
 		Sleep(15000);
-		Crackdown::_Crackdown::LoadPlugin();
+		Crackdown::_Crackdown crackdown;
+		crackdown.LoadPlugin();
 		break;
 
 	case xTools::GAME_CRYSIS2:
 		Sleep(15000);
-		Crysis2::_Crysis2::LoadPlugin();
+		Crysis2::_Crysis2 crysis2;
+		crysis2.LoadPlugin();
 		break;
 
 	case xTools::GAME_COUNTERSTRIKE:
 		Sleep(15000);
-		CSGO::CounterStrike::LoadPlugin();
+		CSGO::CounterStrike csgo;
+		csgo.LoadPlugin();
 		break;
 
 	case xTools::GAME_DOOM3BFG:
@@ -80,7 +86,8 @@ void PluginMain::InitNewTitle(uint32_t newTitleId)
 
 	case xTools::GAME_LEFT4DEAD2:
 		Sleep(15000);
-		Left4Dead2::L4D2::LoadPlugin();
+		Left4Dead2::L4D2 l4d2;
+		l4d2.LoadPlugin();
 		break;
 
 	case xTools::GAME_SAINTSROW:

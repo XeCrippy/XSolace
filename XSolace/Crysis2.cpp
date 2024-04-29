@@ -5,19 +5,14 @@ namespace Crysis2 {
 
 	XINPUT_STATE state;
 
-	bool aimAssist = false;
-	bool fov = false;
-	bool godMode = false;
-	bool infiniteAmmo = false;
+	int( *_Crysis2::ExecuteStringInternal)(uint32_t consolePtr, const char* command, bool bFromConsole, bool bSilentMode) = reinterpret_cast<int(*)(uint32_t, const char*, bool, bool)>(0x822D5B68); //0x82286300); crysis1
 
-	int( *ExecuteStringInternal)(uint32_t consolePtr, const char* command, bool bFromConsole, bool bSilentMode) = reinterpret_cast<int(*)(uint32_t, const char*, bool, bool)>(0x822D5B68); //0x82286300); crysis1
-
-	void ExecCommand(const char *command) {
+	void _Crysis2::ExecCommand(const char *command) {
 		uint32_t cxconsole = *(uint32_t*)0x83AC6E58; //0x837CF198; crysis1
 		ExecuteStringInternal(cxconsole, command, false, false);
 	}
 
-	bool AdvancedAimAssist() {
+	bool _Crysis2::AdvancedAimAssist() {
 		 
 		uint32_t aim_assistFalloffDistance = *(uint32_t*)0x403CB744;
 		uint32_t aim_assistGlidingMultiplier = *(uint32_t*)0x403CB6B8;
@@ -66,7 +61,7 @@ namespace Crysis2 {
 		return aimAssist;
 	}
 
-	bool DemigodMode() {
+	bool _Crysis2::DemigodMode() {
 
 		uint32_t pl_health_normal_threshold_time_to_regenerateSP = xTools::Memory::ReadUInt32(0x403CC138);
 		uint32_t pl_health_normal_regeneration_rateSP = xTools::Memory::ReadUInt32(0x403CC170);
@@ -86,7 +81,7 @@ namespace Crysis2 {
 		return godMode;
 	}
 
-	bool InfinteAmmo() {
+	bool _Crysis2::InfinteAmmo() {
 		uint32_t ammo = 0x82FFB5B8;
 		uint32_t nop = 0x60000000;
 		uint32_t ammo_off = 0x90AB0004;
@@ -104,7 +99,7 @@ namespace Crysis2 {
 		return infiniteAmmo;
 	}
 
-	bool ToggleFov() {
+	bool _Crysis2::ToggleFov() {
 
 		uint32_t cl_fov = xTools::Memory::ReadUInt32(0x83C5322C);
 
@@ -121,7 +116,7 @@ namespace Crysis2 {
 		return fov;
 	}
 		
-	const wchar_t* MainPage() {
+	const wchar_t* _Crysis2::MainPage() {
 
 		std::wstring newLine = L"\r\n";
 		std::wstring mainPage;
@@ -137,7 +132,7 @@ namespace Crysis2 {
 		return mainPage.c_str();
 	}
 
-	const wchar_t* KeyboardPage() {
+	const wchar_t* _Crysis2::KeyboardPage() {
 
 		std::wstring keyboardPage;
 		std::wstring newLine = L"\r\n";
@@ -147,7 +142,7 @@ namespace Crysis2 {
 		return keyboardPage.c_str();
 	}
 
-	void ShowMainPageUI() {
+	void _Crysis2::ShowMainPageUI() {
 
 		const wchar_t* buttonLabels[] = { L"Continue" };
 		xTools::Xam::ShowMessageBox(

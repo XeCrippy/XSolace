@@ -16,11 +16,11 @@ namespace Left4Dead2 {
 
 	int(__fastcall* Cbuf_AddText)(int a1, const char* cmd, int a2) = reinterpret_cast<int(__fastcall*)(int, const char*, int)>(0x86BCDDB0);
 	
-	void SendCommand(const char* cmd) {
+	void L4D2::SendCommand(const char* cmd) {
 		Cbuf_AddText(0, cmd, 0);
 	}
 
-	bool DebugInfo() {
+	bool L4D2::DebugInfo() {
 		if (!showInfo) {
 			SendCommand("cl_showfps 4;cl_showpos 1;say Show Debug Info Enabled");
 			showInfo = true;
@@ -32,7 +32,7 @@ namespace Left4Dead2 {
 		return showInfo;
 	}
 
-	bool GodMode() {
+	bool L4D2::GodMode() {
 		if (!godMode) {
 			SendCommand("god 1;say God Mode Enabled");
 			godMode = true;
@@ -44,7 +44,7 @@ namespace Left4Dead2 {
 		return godMode;
 	}
 
-	bool InfiniteAmmo() {
+	bool L4D2::InfiniteAmmo() {
 		if (!infAmmo) {
 			SendCommand("sv_infinite_ammo 1;say Infinite Ammo Enabled");
 			infAmmo = true;
@@ -56,7 +56,7 @@ namespace Left4Dead2 {
 		return infAmmo;
 	}
 
-	bool LowGravity() {
+	bool L4D2::LowGravity() {
 		if (!lowGravity) {
 			SendCommand("sv_gravity 200;say Low Gravity Enabled");
 			lowGravity = true;
@@ -68,15 +68,15 @@ namespace Left4Dead2 {
 		return lowGravity;
 	}
 
-	void NoClip() {
+	void L4D2::NoClip() {
 		SendCommand("noclip;say Toggled No Clip");
 	}
 
-	void Shake() {
+	void L4D2::Shake() {
 		SendCommand("shake");
 	}
 
-	bool ShowGraphs() {
+	bool L4D2::ShowGraphs() {
 		if (!showGraphs) {
 			SendCommand("+graph;say Show Performance Graphs Enabled");
 			showGraphs = true;
@@ -88,7 +88,7 @@ namespace Left4Dead2 {
 		return showGraphs;
 	}
 
-	bool SlipperyFloors() {
+	bool L4D2::SlipperyFloors() {
 		if (!slipperyFloors) {
 			SendCommand("sv_friction 0.5;say Slippery Floors Enabled");
 			slipperyFloors = true;
@@ -100,7 +100,7 @@ namespace Left4Dead2 {
 		return slipperyFloors;
 	}
 
-	const wchar_t* KeyboardPage() {
+	const wchar_t* L4D2::KeyboardPage() {
 
 		std::wstring kbpage;
 		std::wstring newLine = L"\r\n";
@@ -114,7 +114,7 @@ namespace Left4Dead2 {
 		return kbpage.c_str();
 	}
 
-	const wchar_t* WelcomePage() {
+	const wchar_t* L4D2::WelcomePage() {
 		std::wstring newLine = L"\r\n";
 		std::wstring welcomePage;
 		welcomePage += L"God Mode : D_LEFT+A";
@@ -137,7 +137,7 @@ namespace Left4Dead2 {
 		return welcomePage.c_str();
 	}
 
-	void KeyboardMenu() {
+	void L4D2::KeyboardMenu() {
 
 		unsigned long hr = 0;
 		HRESULT hre = 0;
@@ -161,7 +161,7 @@ namespace Left4Dead2 {
 		SendCommand(cmd.c_str());
 	}
 
-	void WelcomePage_() {
+	void L4D2::WelcomePage_() {
 		const wchar_t* buttonLabels[] = { L"Continue" };
 		const wchar_t* title = L"Left 4 Dead 2 TU6";
 		xTools::Xam::ShowMessageBox(

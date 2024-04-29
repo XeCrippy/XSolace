@@ -3,15 +3,15 @@
 
 namespace COD3 {
 
-	bool minicon;
+	//bool minicon;
 
-    void (*Cbuf_ExecuteText)(int clientIndex, const char* cmd) = reinterpret_cast<void(*)(int, const char*)>(0x8247DBC8); 
+    void (*Cod3::Cbuf_ExecuteText)(int clientIndex, const char* cmd) = reinterpret_cast<void(*)(int, const char*)>(0x8247DBC8); 
 
-	void SendCommand(const char* cmd) {
+	void Cod3::SendCommand(const char* cmd) {
 		Cbuf_ExecuteText(0, cmd);
 	}
 
-	bool MiniCon() {
+	bool Cod3::MiniCon() {
 		if (!minicon) {
 			SendCommand("con_minicon 1;con_miniconlines 10;con_minicontime 999");
 			xTools::Xam::XNotify("Mini Console : Enabled");
@@ -25,19 +25,21 @@ namespace COD3 {
 		return minicon;
 	}
 
-	void ToggleGodMode() {
+	void Cod3::ToggleGodMode() {
 		SendCommand("god");
+		xTools::Xam::PulseController();
 		xTools::Xam::XNotify("Toggled : God Mode");
-		xTools::Xam::PulseController();
+		
 	}
 
-	void ToggleNoClip() {
+	void Cod3::ToggleNoClip() {
 		SendCommand("noclip");
-		xTools::Xam::XNotify("Toggled : No Clip");
 		xTools::Xam::PulseController();
+		xTools::Xam::XNotify("Toggled : No Clip");
+		
 	}
 
-	void KeyboardMenu() {
+	void Cod3::KeyboardMenu() {
 
 		XINPUT_STATE state = { 0 };
 		unsigned long hr = 0;

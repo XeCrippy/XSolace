@@ -25,6 +25,7 @@
   <ItemGroup>
     <None Include="ReadMe.txt" />
     <None Include="xsolace.xml" />
+    <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -94,9 +95,6 @@
       <Filter>Header Files\Games</Filter>
     </ClInclude>
     <ClInclude Include="SaintsRow4.h">
-      <Filter>Header Files\Games</Filter>
-    </ClInclude>
-    <ClInclude Include="Brink.h">
       <Filter>Header Files\Games</Filter>
     </ClInclude>
     <ClInclude Include="Doom3.h">
@@ -177,9 +175,6 @@
       <Filter>Source Files\Games</Filter>
     </ClCompile>
     <ClCompile Include="SaintsRow4.cpp">
-      <Filter>Source Files\Games</Filter>
-    </ClCompile>
-    <ClCompile Include="Brink.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
     <ClCompile Include="Doom3.cpp">
